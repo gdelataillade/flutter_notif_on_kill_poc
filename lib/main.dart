@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notif_on_kill_poc/notif_on_kill.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
             value: value,
             onChanged: (bool _) {
               setState(() => value = _);
+              NotifOnKill.toggleNotifOnKill(value);
             },
           ),
         ],

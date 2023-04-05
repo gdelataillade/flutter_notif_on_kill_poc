@@ -1,9 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutter_notif_on_kill_poc">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
    <application
         android:label="flutter_notif_on_kill_poc"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+    <service
+        android:name=".NotificationOnKillService"
+        android:enabled="true"
+        android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
