@@ -22,8 +22,8 @@ class NotificationOnKillService: Service() {
     // This function is called when the service is started.
     // It gets the title and description from the intent, or sets default values if they are not provided.
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        title = intent?.getStringExtra("title") ?: "Application killed !"
-        description = intent?.getStringExtra("description") ?: "The application just got killed."
+        title = intent?.getStringExtra("title") ?: "Default title"
+        description = intent?.getStringExtra("description") ?: "Default body"
 
         return START_STICKY
     }
